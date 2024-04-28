@@ -2,11 +2,10 @@ import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div>
       <p className="text-3xl font-bold text-indigo-500">
-        Привет messages tracker
+        This is a protected route
       </p>
-      <Button>нажми меня</Button>
     </div>
   );
 }
