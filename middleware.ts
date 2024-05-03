@@ -1,8 +1,8 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+
+const isProtectedRoute = createRouteMatcher(['/api/uploadthing(.*)']);
 
 export default clerkMiddleware();
-
 export const config = {
-  publicRoutes: ['/', '/public', '/sign-in', '/sign-up'],
   matcher: ['/((?!.+.[w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
